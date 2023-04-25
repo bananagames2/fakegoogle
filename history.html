@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Google</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/2008px-Google_%22G%22_Logo.svg.png">
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <label for="times">How many times do you want this page to show up in your history? <a href="https://sites.google.com/view/bananagamesfr2/home">(By Banana Games)</a></label>
+        <input type="number" id="times" name="times" placeholder="Enter a number">
+        <button type="button" onclick="floodHistory()">Flood History</button>
+      </form>
+      
+    </div>
+    
+    <script>
+      function floodHistory() {
+        var num = parseInt(document.getElementById("times").value);
+        var done = false;
+        var x = window.location.href;
+        
+        for (var i = 1; i <= num; i++) {
+          history.pushState(0, 0, i == num ? x : i.toString());
+          if (i == num) {
+            done = true;
+          }
+        }
+        
+        if (done === true) {
+          alert("Flooding Successful!");
+        }
+      }
+      
+      function panic() {
+        document.querySelector("link[rel='icon']").setAttribute("href", "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Google_Classroom_Logo.svg/512px-Google_Classroom_Logo.svg.png?20221017163738");
+        document.title = "Classes";
+        document.body.innerHTML = '<iframe src="classroom.html" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; border: none;"></iframe>';
+      }
+    </script>
+  </body>
+</html>

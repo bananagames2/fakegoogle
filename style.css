@@ -1,0 +1,87 @@
+/* Set body styles */
+body {
+  font-family: 'Lexend', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Style form elements */
+form {
+  max-width: 400px;
+  font-family: 'Lexend', sans-serif;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+label {
+  display: block;
+  font-family: 'Lexend', sans-serif;
+  margin-bottom: 10px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.panic-container {
+  margin-top: 20px;
+}
+
+
+input[type="number"] {
+  display: block;
+  font-family: 'Lexend', sans-serif;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+button[type="button"] {
+  background-color: #4CAF50;
+  font-family: 'Lexend', sans-serif;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button[type="button"]:hover {
+  background-color: #3e8e41;
+}
+
+button[type="button"]:focus {
+  outline: none;
+}
+
+/* Style alert box */
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.alert-success {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
