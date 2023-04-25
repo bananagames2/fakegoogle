@@ -17,21 +17,23 @@
     </div>
     
     <script>
-      function floodHistory() {
-        var num = parseInt(document.getElementById("times").value);
-        var done = false;
-        var x = window.location.href;
-        
-        for (var i = 1; i <= num; i++) {
-          history.pushState(0, 0, i == num ? x : i.toString());
-          if (i == num) {
-            done = true;
-          }
-        }
-        
-        if (done === true) {
-          alert("Flooding Successful!");
-        }
+function floodHistory() {
+  var num = parseInt(document.getElementById("times").value);
+  var done = false;
+  var url = "https://algebrabrothers.vercel.app/";
+  
+  for (var i = 1; i <= num; i++) {
+    history.pushState(0, 0, i == num ? url : i.toString());
+    if (i == num) {
+      done = true;
+    }
+  }
+  
+  if (done === true) {
+    alert("Flooding Successful!");
+  }
+}
+
       }
       
       function panic() {
